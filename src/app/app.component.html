@@ -1,0 +1,39 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+  </button>
+  <span>Digistarts</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-drawer-container class="container-sidenav" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <mat-card class="card-1">
+      <form class="example-form" [formGroup]="formNumeros">
+        <mat-form-field class="example-full-width">
+          <mat-label>Número</mat-label>
+          <input matInput placeholder="1000" value="">
+        </mat-form-field>
+        <div class="example-button-container">
+          <button mat-mini-fab color="second" aria-label="Example icon button with a menu icon" (click)="adicionarArray()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+      </form>
+    </mat-card>
+    <mat-card class="card-2">
+
+    </mat-card>
+  </div>
+
+</mat-drawer-container>

@@ -20,11 +20,12 @@ export class AppComponent {
     });
   }
   
-
+  // Adiciona um número por vez no array através do formulário
   adicionarArray() {
-    this.numeros.push()
+    
   }
 
+  // Faz o cálculo, não trazendo os valores repetidos e ordem crescente
   adicionar() {
     let n = this.numeros[0];
     let variosN = this.numeros.filter(i => i != n);
